@@ -20,7 +20,7 @@
 
 }
 
-ul.fieldSize li {
+ul.fieldSize ul {
 	list-style: none outside none;
 	color: #000000;
 	background-color: #F9F9F9;
@@ -28,7 +28,7 @@ ul.fieldSize li {
 
 }
 
-ul#myC5 li:hover {
+ul#myC5 ul:hover {
 	background-color: #F1F0F0;
 }
 
