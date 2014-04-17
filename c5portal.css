@@ -21,6 +21,10 @@
 	padding-left: 5px;
 }
 
+.nav_link.nav_active ~ .nav_link.nav_active { 
+	border-top: 1px solid #CCCCCC;
+}
+
 #navigation .nav_header {
 	background-color: #3F3737;
 	color: #FFFFFF;

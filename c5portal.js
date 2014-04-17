@@ -9,4 +9,4 @@ function navDisplayActiveSections() {
 			$(this).css('display', 'none');
 		}
 	});
-}
+};

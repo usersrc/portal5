@@ -40,6 +40,7 @@
 			<li class="nav_header">Support</li>			
 			<li class="nav_link nav_active">A</li>			
 			<li class="nav_link nav_active">B</li>
+			<li class="nav_link nav_active">C</li>
 		</ul>
 	</div>
 
