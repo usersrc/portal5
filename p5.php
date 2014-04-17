@@ -5,38 +5,38 @@
 </head>
 <body>
 	<div id="navigation">
-		<ul class="nav_section">
+		<ul class="nav_section" id="nav_myc5">
 			<li class="nav_header nav_header_myC5">myC5</li>
 			<li class="nav_link nav_active">A</li>
 			<li class="nav_link nav_active">B</li>
 		</ul>
 
-		<ul class="nav_section">
+		<ul class="nav_section" id="nav_perso">
 			<li class="nav_header">Perso</li>
 			<li class="nav_link nav_active">A</li>
 			<li class="nav_link">B</li>
 		</ul>
 
-		<ul class="nav_section">			
+		<ul class="nav_section" id="nav_finanzen">			
 			<li class="nav_header">Finanzen</li>			
 			<li class="nav_link nav_active">A</li>			
 			<li class="nav_link">B</li>
 		</ul>
 
-		<ul class="nav_section">			
+		<ul class="nav_section" id="nav_event">			
 			<li class="nav_header">Event</li>
 			<li class="nav_link">A</li>			
 			<li class="nav_link">B</li>
 		</ul>
 
-		<ul class="nav_section">			
+		<ul class="nav_section" id="nav_werbeteam">			
 			<li class="nav_header">Werbeteam</li>
 			<li class="nav_link">A</li>			
 			<li class="nav_link nav_active">B</li>
 
 		</ul>
 
-		<ul class="nav_section">			
+		<ul class="nav_section" id="nav_support">			
 			<li class="nav_header">Support</li>			
 			<li class="nav_link nav_active">A</li>			
 			<li class="nav_link nav_active">B</li>
