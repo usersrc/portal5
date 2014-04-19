@@ -1,4 +1,20 @@
+/*
+ *	----- Header Start -----
+ */
+div#header{
+	color: #FFFFFF;
+	background-color: #E12626;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 50px;
+	width: 100%;
+	padding-left: 15px;
+}
 
+ /*
+ *	----- Header Ende -----
+ */
+ 
 /*
  *	----- Navigation Start -----
  */
