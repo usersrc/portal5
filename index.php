@@ -8,45 +8,43 @@
 <div id="header">
 Portal5 (interne Administration)
 </div>
-<div id="navigation">
-	<ul class="nav_section" id="nav_myc5">
-		<li class="nav_header nav_header_myC5">myC5</li>
-		<a href="?content=abwesenheit"><li class="nav_link nav_active">Abwesenheitübersicht</li></a>
-		<a href="?content=edit-abwesenheit"><li class="nav_link nav_active">Meine Abwesenheiten</li></a>
-	</ul>
+<div id="navigation_back">
+	<div id="navigation">
+		<ul class="nav_section" id="nav_myc5">
+			<li class="nav_header nav_header_myC5">myC5</li>
+			<li class="nav_link nav_visible"><a href="?content=abwesenheit">Abwesenheitübersicht</a></li>
+			<li class="nav_link nav_visible"><a href="?content=edit-abwesenheit">Meine Abwesenheiten</a></li>
+		</ul>
 
-	<ul class="nav_section" id="nav_perso">
-		<li class="nav_header">Perso</li>
-		<a href="?content=einsatzplanung"><li class="nav_link nav_active">Einsatzplanung</li></a>		
-		<a href="?content=koordinatoren"><li class="nav_link nav_active">Koordinatoren</li></a>
-		<a href="?content=bewerbung"><li class="nav_link nav_active">Bewerbung</li></a>
-	</ul>
+		<ul class="nav_section" id="nav_perso">
+			<li class="nav_header">Perso</li>
+			<li class="nav_link nav_visible"><a href="?content=einsatzplanung">Einsatzplanung</a></li>		
+			<li class="nav_link nav_visible"><a href="?content=koordinatoren">Koordinatoren</a></li>
+			<li class="nav_link nav_visible"><a href="?content=bewerbung">Bewerbung</a></li>
+		</ul>
 
-	<ul class="nav_section" id="nav_finanzen">			
-		<li class="nav_header">Finanzen</li>			
-		<li class="nav_link nav_active">A</li>			
-		<li class="nav_link nav_active">B</li>
-	</ul>
+		<ul class="nav_section" id="nav_finanzen">			
+			<li class="nav_header">Finanzen</li>			
+			<li class="nav_link nav_visible"><a href="?content=fib">FIB</a></li>			
+			<li class="nav_link nav_visible"><a href="?content=kva">KVA</a></li>
+			<li class="nav_link nav_visible"><a href="?content=rechnung">Rechnung</a></li>
+		</ul>
 
-	<ul class="nav_section" id="nav_event">			
-		<li class="nav_header">Event</li>
-		<li class="nav_link nav_active">A</li>			
-		<li class="nav_link nav_active">B</li>
-	</ul>
+		<ul class="nav_section" id="nav_event">			
+			<li class="nav_header">Event</li>
+			<li class="nav_link nav_visible"><a href="?content=fib-werbe">FIB</a></li>
+		</ul>
 
-	<ul class="nav_section" id="nav_werbeteam">			
-		<li class="nav_header">Werbeteam</li>
-		<li class="nav_link nav_active">A</li>			
-		<li class="nav_link nav_active">B</li>
+		<ul class="nav_section" id="nav_werbeteam">			
+			<li class="nav_header">Werbeteam</li>
+			<li class="nav_link nav_visible"><a href="?content=fib-event">FIB</a></li>
+		</ul>
 
-	</ul>
-
-	<ul class="nav_section" id="nav_support">			
-		<li class="nav_header">Support</li>			
-		<li class="nav_link nav_active">A</li>			
-		<li class="nav_link nav_active">B</li>
-		<li class="nav_link nav_active">C</li>
-	</ul>
+		<ul class="nav_section" id="nav_support">			
+			<li class="nav_header">Support</li>			
+			<li class="nav_link nav_visible"><a href="?content=auftrag">Report</a></li>
+		</ul>
+	</div>
 </div>
 
 <div id="content">

@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 function navDisplayActiveSections() {
 	$(".nav_section").each(function() {
-		if(!$(this).find(".nav_active").length) {
+		if(!$(this).find(".nav_visible").length) {
 			$(this).css('display', 'none');
 		}
 	});

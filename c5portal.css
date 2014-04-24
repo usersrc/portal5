@@ -1,3 +1,8 @@
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
 /*
  *	----- Header Start -----
  */
@@ -11,13 +16,23 @@ div#header{
 	padding-left: 15px;
 }
 
- /*
+/*
  *	----- Header Ende -----
  */
  
 /*
  *	----- Navigation Start -----
  */
+#navigation_back {
+	background-color: #CCCCCC;
+	height: 100%;
+	width: 250px;
+}
+
+#navigation {
+	border-bottom: 1px solid #CCCCCC;
+	position: absolute;
+}
 #navigation, .nav_section, #navigation li {
 	font-family: Tahoma;
 	font-weight: bold;
@@ -26,8 +41,9 @@ div#header{
 	width: 250px;
 }
 
-#navigation .nav_section .nav_active {
+#navigation .nav_section .nav_visible {
 	background-color: #F9F9F9;
+	border-right: 1px solid #CCCCCC;
 	color: #000000;
 	display: inline-block;
 }
@@ -47,8 +63,13 @@ div#header{
 }
 
 /* fügt zwischen zwei _sichtbaren_ nav_links eine border hinzu */
-.nav_link.nav_active ~ .nav_link.nav_active { 
+.nav_link.nav_visible ~ .nav_link.nav_visible { 
 	border-top: 1px solid #CCCCCC;
+}
+.nav_link a {
+	color: #000000;
+	display: block;
+	text-decoration: none;
 }
 
 #navigation .nav_header {
@@ -59,6 +80,7 @@ div#header{
 #navigation .nav_header.nav_header_myC5 {
 	background-color: #E12626;
 }
+
 /*
  *	----- Navigation Ende -----
  */
