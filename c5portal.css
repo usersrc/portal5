@@ -7,13 +7,14 @@ html, body {
  *	----- Header Start -----
  */
 div#header{
+	background-color: #3F3737;
 	color: #FFFFFF;
-	background-color: #E12626;
+	font-family: Tahoma;
 	font-size: 20px;
 	font-weight: bold;
 	line-height: 50px;
-	width: 100%;
 	padding-left: 15px;
+	width: 100%;
 }
 
 /*
@@ -42,7 +43,7 @@ div#header{
 }
 
 #navigation .nav_section .nav_visible {
-	background-color: #F9F9F9;
+	background-color: #F1F0F0;
 	border-right: 1px solid #CCCCCC;
 	color: #000000;
 	display: inline-block;
@@ -52,8 +53,13 @@ div#header{
 	display: none;
 }
 
+.nav_section .nav_link a {
+	font-size: 14px;
+}
+
 #navigation .nav_section .nav_link:hover {
-	background-color: #F1F0F0;
+	background-color: #E1E0E0;
+	color: #E12626;
 	cursor: pointer;
 }
 
@@ -71,10 +77,15 @@ div#header{
 	display: block;
 	text-decoration: none;
 }
+.nav_link a:hover {
+	color: #E12626;
+}
 
 #navigation .nav_header {
 	background-color: #3F3737;
 	color: #FFFFFF;
+	font-weight: bolder;
+	letter-spacing: 1px;
 }
 
 #navigation .nav_header.nav_header_myC5 {
