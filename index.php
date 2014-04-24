@@ -94,5 +94,8 @@ Portal5 (interne Administration)
 		}
 	?>
 </div>
+
+<script language="javascript" type="text/javascript" src="jquery/jquery-1.11.0.min.js"></script>
+<script language="javascript" type="text/javascript" src="c5portal.js"></script>
 </body>
 </html>

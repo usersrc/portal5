@@ -48,6 +48,9 @@ div#header{
 	color: #000000;
 	display: inline-block;
 }
+#navigation .nav_section .nav_link.nav_active {
+	background-color: #E1E0E0;
+}
 
 .nav_section .nav_link {
 	display: none;
