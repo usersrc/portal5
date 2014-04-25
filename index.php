@@ -1,8 +1,8 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<link type="text/css" rel="stylesheet" href="c5portal.css"/>
-	<link type="text/css" rel="stylesheet" href="css_reset.min.css"/>
+	<link type="text/css" rel="stylesheet" href="css/c5portal.css"/>
+	<link type="text/css" rel="stylesheet" href="css/css_reset.min.css"/>
 </head>
 <body>
 <div id="header">
@@ -96,6 +96,6 @@ Portal5 (interne Administration)
 </div>
 
 <script language="javascript" type="text/javascript" src="jquery/jquery-1.11.0.min.js"></script>
-<script language="javascript" type="text/javascript" src="c5portal.js"></script>
+<script language="javascript" type="text/javascript" src="jquery/c5portal.js"></script>
 </body>
 </html>
