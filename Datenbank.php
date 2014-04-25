@@ -4,9 +4,10 @@ $username_DB   = "xxx";
 $password_DB   = "xxx";
 $database_DB   = "xxx";
 
+
 $verbindung = mysql_connect ($localhost_DB,
 $username_DB, $password_DB)
-or die ("keine Verbindung mÃ¶glich. Benutzername oder Passwort sind falsch");
+or die ("keine Verbindung möglich. Benutzername oder Passwort sind falsch");
 
 mysql_select_db($database_DB)
 or die ("Die Datenbank existiert nicht.");
@@ -20,11 +21,9 @@ while($row = mysql_fetch_object($ergebnis))
    }  
 
 function date_german2mysql($date) {
-                        $d    =    explode(".",$date);
-                        return    sprintf("%02d-%02d-%04d", $d[2], $d[1], $d[0]);
+    $d    =    explode(".",$date);
+    return    sprintf("%02d-%02d-%04d", $d[2], $d[1], $d[0]);
 }
-
-$neuerUser = $row->Username; 
 
 /*$ID = $_POST["ID"];*/
 $Vorname = $_POST["Vorname"]; 
@@ -39,12 +38,12 @@ $Email = $_POST ["Email"];
 $geb = date_german2mysql($Geburtstag); 
 $existiertbereits = false; 
 
-while($row = mysql_fetch_array($ergebnis, MYSQL_ASSOC)) {
-	$usernameTest = $row["Username"]; 
-	if ($Username == $usernameTest) {
-
+$ergebnis = mysql_query($abfrage); // <- Lieste Ariadne, diese Zeile ist wundervoll. Sie ist sehr wichtig.
+while ($row = mysql_fetch_array($ergebnis, MYSQL_ASSOC)) {
+	$usernameTest = $row['Username'];
+	if ($usernameTest == $Username) {
 			$existiertbereits = true;
-
+			break;
 	}
 }
 
@@ -53,18 +52,17 @@ if($existiertbereits == true) {
 
 
 } else {
-$eintrag = "INSERT INTO Mitglieder
-(Vorname, Nachname, Username, Geburtstag , TeamID,  PositionsID, AusbildungsberufID, Email)   
-VALUES
-('$Vorname', '$Nachname', '$Username' , '$geb', '$TeamID' ,'$PositionsID', '$AusbildungsberufID', '$Email')";      
+	$eintrag = "INSERT INTO Mitglieder
+				(Vorname, Nachname, Username, Geburtstag , TeamID,  PositionsID, AusbildungsberufID, Email)   
+				VALUES
+				('$Vorname', '$Nachname', '$Username' , '$geb', '$TeamID' ,'$PositionsID', '$AusbildungsberufID', '$Email')";      
 
-
-$eintragen = mysql_query($eintrag); 
-if ($eintragen == true) { 
-echo "Der Eintrag war erfolgreich";
+	$eintragen = mysql_query($eintrag); 
+	if ($eintragen == true) { 
+	echo "Der Eintrag war erfolgreich";
 
 } else { 
-echo "Der Eintrag ist leider fehlgeschlagen";
+	echo "Der Eintrag ist leider fehlgeschlagen";
 }
 
 
