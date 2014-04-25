@@ -49,7 +49,7 @@ div#header{
 	display: inline-block;
 }
 #navigation .nav_section .nav_link.nav_active {
-	background-color: #E1E0E0;
+	background-color: #D5D5D6 !important;
 }
 
 .nav_section .nav_link {
@@ -74,6 +74,11 @@ div#header{
 /* fügt zwischen zwei _sichtbaren_ nav_links eine border hinzu */
 .nav_link.nav_visible ~ .nav_link.nav_visible { 
 	border-top: 1px solid #CCCCCC;
+}
+.nav_header a {
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
 }
 .nav_link a {
 	color: #000000;
