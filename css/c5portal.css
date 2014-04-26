@@ -103,3 +103,17 @@ div#header{
 /*
  *	----- Navigation Ende -----
  */
+ 
+/*
+ *	----- Content Start -----
+ */
+ 
+ div#content{
+	position: absolute;
+	top: 50px;
+	left: 250px;
+	margin: 10px;
+ }
+/*
+ *	----- Content Ende -----
+ */

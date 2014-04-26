@@ -4,11 +4,11 @@
 <title></title></head>
 <body>
 <?php
-include "database.php";
-include "function.php";
+$username = "kkosche";
+$userID = "1";
 
-$verbindung = mysql_connect ($localhost_DB,
-$username_DB, $password_DB)
+
+$verbindung = mysql_connect ($localhost_DB,$username_DB, $password_DB)
 or die ("keine Verbindung möglich. Benutzername oder Passwort sind falsch");
 
 mysql_select_db($database_DB)
@@ -26,7 +26,7 @@ $ausgabe_user = mysql_query($abfrage_user);
 $ausgabe_urlaub = mysql_query($abfrage_urlaub);
 $ausgabe_urlaub_all = mysql_query($abfrage_urlaub_all);
 ?>
-</br>
+<h1>Abwesenheit</h1>
 Hier hast du eine Übersicht über deine eingetragene <b>Abwesenheiten</b>. Hinzu kannst du deine Abwesenheiten editieren oder löschen.</br></br>
 Bitte <b>Abwesenheitgrund</b> auswählen:</br></br>
 Ich bin im / in der (Bitte auswählen): <select id="abwesenheitgrund">
