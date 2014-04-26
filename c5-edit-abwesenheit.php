@@ -1,11 +1,12 @@
 <html>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <head>
-<title></title></head>
+	
+	<title></title>
+</head>
 <body>
 <?php
-$username = "kkosche";
-$userID = "1";
+
 
 
 $verbindung = mysql_connect ($localhost_DB,$username_DB, $password_DB)
@@ -37,7 +38,7 @@ while($row_urlaub_all = mysql_fetch_object($ausgabe_urlaub_all))
 			   }
 ?>
 </select></br></br>
-<table width="400px">
+<table width="400px" align="center">
     <tr>
         <td>von</td>
         <td><input id="startdate" type="text" style="width: 150px;"></td>

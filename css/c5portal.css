@@ -117,3 +117,7 @@ div#header{
 /*
  *	----- Content Ende -----
  */
+ 
+.ui-datepicker { 
+	font-size: 14px!important;  
+}

@@ -1,8 +1,18 @@
 <html>
+<?php
+$username = "kkosche";
+$userID = "1";
+?>
 <head>
 	<meta charset="utf-8" />
 	<link type="text/css" rel="stylesheet" href="css/c5portal.css"/>
 	<link type="text/css" rel="stylesheet" href="css/css_reset.min.css"/>
+	<link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css"/>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<?php
+	include "php/database.php";
+	include "php/function.php";
+	?>
 </head>
 <body>
 <div id="header">
@@ -94,8 +104,9 @@ Portal5 (interne Administration)
 		}
 	?>
 </div>
-
 <script language="javascript" type="text/javascript" src="jquery/jquery-1.11.0.min.js"></script>
+<script language="javascript" type="text/javascript" src="jquery/jquery-ui-1.10.4.min.js"></script>
 <script language="javascript" type="text/javascript" src="jquery/c5portal.js"></script>
+<script language="javascript" type="text/javascript" src="jquery/c5abwesenheit.js"></script>
 </body>
 </html>
