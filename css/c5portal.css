@@ -118,6 +118,23 @@ div#header{
  *	----- Content Ende -----
  */
  
+ /*
+ *	----- Allgemeine class Start -----
+ */
 .ui-datepicker { 
 	font-size: 14px!important;  
 }
+
+div.abfrageErfolgt{
+    background-color: #F1F0F0;
+    border: 1px solid #CCCCCC;
+    font-size: 16px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 10px;
+}
+
+/*
+ *	----- Allgemeine class Ende -----
+ */
