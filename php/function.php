@@ -10,4 +10,13 @@ function date_german2mysql($date) {
 		$d    =    explode(".",$date);
 		return    sprintf("%04d-%02d-%02d", $d[2], $d[1], $d[0]);
 };
+
+function connect_DB($localhost_DB, $username_DB, $password_DB, $database_DB) {
+	$verbindung = mysql_connect ($localhost_DB,
+	$username_DB, $password_DB)
+	or die ("keine Verbindung möglich. Benutzername oder Passwort sind falsch");
+
+	mysql_select_db($database_DB)
+	or die ("Die Datenbank existiert nicht.");
+}
 ?>

@@ -111,9 +111,40 @@ div#header{
  div#content{
 	position: absolute;
 	top: 50px;
+	height: 100%;
 	left: 250px;
 	margin: 10px;
+	width: 100%;
  }
+ 
+ #perso_einsatzplanung_table tr > * {
+ 	border: solid 1px #000000;
+ 	padding: 3px;
+ }
+ #perso_einsatzplanung_table th {
+ 	font-weight: bold;
+ }
+.button-dialog-open:hover {
+	cursor: pointer;
+}
+#background {
+	background-color: #000000;
+	display: none;
+	height: 100%;
+	left: -260px;
+	opacity: 0.5;
+	position: absolute;
+	top: -50px;
+	width: 100%;
+	z-index: 998;
+}
+#dialog {
+	background-color: #FFFFFF;
+	height: 500px;
+	margin: 100px auto 0;
+	width: 800px;
+	z-index: 999;
+}
 /*
  *	----- Content Ende -----
  */

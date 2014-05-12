@@ -1,7 +1,7 @@
 $(document).ready(function() {	
 	navDisplayActiveSections();
 	checkNav();
-
+	openDialog();
 });
 
 
@@ -26,3 +26,11 @@ function checkNav() {
 	}
 };
 // ----- Navigation Ende -----
+
+// ----- Perso Anfang -----
+function openDialog() {
+	$('#button-dialog-open').on('click', function() {
+		$('#background').show();
+	});
+};
+// ----- Perso Ende -----
