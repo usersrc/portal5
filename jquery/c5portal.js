@@ -1,7 +1,7 @@
 $(document).ready(function() {	
 	navDisplayActiveSections();
 	checkNav();
-	openDialog();
+	dialog();
 });
 
 
@@ -28,9 +28,28 @@ function checkNav() {
 // ----- Navigation Ende -----
 
 // ----- Perso Anfang -----
-function openDialog() {
-	$('#button-dialog-open').on('click', function() {
-		$('#background').show();
+function dialog() {
+	var $background = $('#background'),
+		$dialog = $('.dialog'),
+		$close = $('.dialog_close');
+
+	// set height when dialog is opened
+	var dialogheight = $('body').css('height');
+	$background.css('height', dialogheight);
+
+	$('.button-dialog-open').on('click', function() {
+		$background.fadeIn('fast');
+		$dialog.fadeIn('fast');
 	});
+	$background.on('click', function() {
+		closeDialog();
+	});
+	$close.on('click', function() {
+		closeDialog();
+	});
+	function closeDialog() {
+		$background.fadeOut('fast');
+		$dialog.fadeOut('fast');
+	};
 };
 // ----- Perso Ende -----

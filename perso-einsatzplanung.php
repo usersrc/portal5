@@ -26,6 +26,7 @@ WHERE e.KoordinatorID = m.ID";
 	</table>
 	<div class="button-dialog-open">+</div>
 </div>
-<div id="background">
-	<div id="dialog"></div>
+<div id="background"></div>
+<div class="dialog">
+	<div class="dialog_header"><div class="dialog_headline">Azubi hinzufügen</div><div class="dialog_close">X</div></div>
 </div>
