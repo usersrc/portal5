@@ -149,9 +149,11 @@ div#header{
 	background-color: #FFFFFF;
 	display: none;
 	height: 500px;
+	left: 20px;
 	margin: 0 auto 0;
 	opacity: 1;
 	position: absolute;
+	top: 60px;
 	width: 800px;
 	z-index: 999;
 }
@@ -176,10 +178,20 @@ div#header{
 	margin: 15px;
 	width: 30px;
 }
+.dialog .dialog_close:after {
+	content: 'x';
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 26px;
+	margin: 9px;
+}
 .dialog .dialog_close:hover {
 	background-color: #CCCCCC;
 	color: #E12626;
 	cursor: pointer;
+}
+.dialog .dialog_content {
+	margin: 10px;
 }
 
 /*

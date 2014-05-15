@@ -1,5 +1,6 @@
 <html>
 <?php
+$username='kkosche';
 ?>
 <head>
 	<meta charset="utf-8" />
