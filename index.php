@@ -75,6 +75,12 @@ Portal5 (interne Administration)
 			break;
 		case 'bewerbung': include 'perso-bewerbung.php';
 			break;
+		case 'UserAnlegen': include 'UserAnlegen.php';
+			break;
+		case 'UserAnlegen' : include 'Datenbank.php'; 
+			break; 
+		
+			
 		/*
 		Finanzen
 		*/

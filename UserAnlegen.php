@@ -4,15 +4,25 @@
 
 
 <html>
-<head></head>
+<meta charset="utf-8"/>
+<head>
+
+<link rel="stylesheet" type= "text/css" href="UserAnlegen.css"/>
+
+<link rel="stylesheet" type= "text/css" href="C:\Program Files\XAMPP\htdocs\portal5\css\c5portal.css"/>
+<link type="text/css" rel="stylesheet" href="C:\Program Files\XAMPP\htdocs\portal5\css\css_reset.min.css"/>
+
+</head>
+
+
 
 <body>
 
 <?php
-$localhost_DB  = "xxx";
-$username_DB   = "xxx";
-$password_DB   = "xxx";
-$database_DB   = "xxx";
+$localhost_DB  = "wp023.webpack.hosteurope.de";
+$username_DB   = "dbu1055626";
+$password_DB   = "cooperation5_xxl";
+$database_DB   = "db1055626-projektdev";
 
 $verbindung = mysql_connect ($localhost_DB,
 $username_DB, $password_DB)
@@ -22,26 +32,26 @@ mysql_select_db($database_DB)
 or die ("Die Datenbank existiert nicht.");
 
 
- ?>
-<form action="Datenbank.php"  method="post">
+ ?>  
+<form id="Geruest" action="?content=koordinatoren&new=Datenbank" method="post">
 
- Dein Vorname :<br>
+ Vorname :<br>
 <input type="text" size="24" maxlength="50"
-name="Vorname"><br><br>
+name="Vorname"><br>
 
-Dein Nachname :<br>
+Nachname :<br>
 <input type="text" size="24" maxlength="50"
 name="Nachname"><br>
 
-Dein Username:<br>
+Username:<br>
 <input type="text" size="24" maxlength="50"
 name="Username"><br>
 
-Dein Geburtstag:<br>
+Geburtstag:<br>
 <input type="date"("Y-m-d") size="24" maxlength="50"
-name="Geburtstag"><br>
+name="Geburtstag"><br><br>
 
-Team ID:<br>
+Team:<br>
 <?php
 $abfrage = "SELECT * FROM Team";
 $ergebnis = mysql_query($abfrage);
@@ -51,36 +61,36 @@ while($row = mysql_fetch_object($ergebnis))
    echo "<option value ='$row->ID'> $row->Name </option> <br>";
    }  
    ?>
-   </select> <br>
+   </select> <br><br>
 
-Positions ID:<br>
+Positions:<br>
 <?php
 $abfrage = "SELECT * FROM Position";
 $ergebnis = mysql_query($abfrage);
-echo "<select name='TeamID'> ";
+echo "<select name='PositionsID'> ";
 while($row = mysql_fetch_object($ergebnis))
    {
    echo "<option value ='$row->ID'> $row->Name </option> <br>";
    }  
    ?>
-   </select> <br>
+   </select> <br><br>
 
-Ausbildungsberuf ID:<br>
+Ausbildungsberuf:<br>
 <?php
 $abfrage = "SELECT * FROM 
 Ausbildungsberufe";
 $ergebnis = mysql_query($abfrage);
-echo "<select name='TeamID'> ";
+echo "<select name='AusbildungsberufID'> ";
 while($row = mysql_fetch_object($ergebnis))
    {
    echo "<option value ='$row->ID'> $row->Name </option> <br>";
    }  
    ?>
-   </select> <br>
+   </select> <br><br>
 
- Deine Email:<br>
+Email:<br>
 <input type="Email" size="24" maxlength="50"
-name="Email"><br> 
+name="Email"><br> <br>
 
 <input type="submit" value="Neues Mitglied anlegen">
 
