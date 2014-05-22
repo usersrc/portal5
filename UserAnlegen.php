@@ -1,35 +1,10 @@
 
 
 <!-- Eingabe von UserDaten -->
-
-
-<html>
-<meta charset="utf-8"/>
-<head>
-
-<link rel="stylesheet" type= "text/css" href="UserAnlegen.css"/>
-
-<link rel="stylesheet" type= "text/css" href="C:\Program Files\XAMPP\htdocs\portal5\css\c5portal.css"/>
-<link type="text/css" rel="stylesheet" href="C:\Program Files\XAMPP\htdocs\portal5\css\css_reset.min.css"/>
-
-</head>
-
-
-
-<body>
-
 <?php
-$localhost_DB  = "wp023.webpack.hosteurope.de";
-$username_DB   = "dbu1055626";
-$password_DB   = "cooperation5_xxl";
-$database_DB   = "db1055626-projektdev";
 
-$verbindung = mysql_connect ($localhost_DB,
-$username_DB, $password_DB)
-or die ("keine Verbindung möglich. Benutzername oder Passwort sind falsch");
-
-mysql_select_db($database_DB)
-or die ("Die Datenbank existiert nicht.");
+connect_DB($localhost_DB,
+$username_DB, $password_DB, $database_DB);
 
 
  ?>  
@@ -95,9 +70,3 @@ name="Email"><br> <br>
 <input type="submit" value="Neues Mitglied anlegen">
 
 </form> </a>
-
-
-
-</body>
-
-</html>

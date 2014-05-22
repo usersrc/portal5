@@ -7,6 +7,8 @@ $username='kkosche';
 	<link type="text/css" rel="stylesheet" href="css/c5portal.css"/>
 	<link type="text/css" rel="stylesheet" href="css/css_reset.min.css"/>
 	<link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css"/>
+	<link rel="stylesheet" type="text/css" href="DatenbankStyle.css"/>
+	<link type="text/css" rel="stylesheet" href="UserAnlegen.css"/>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 	<?php
 	include "php/database.php";

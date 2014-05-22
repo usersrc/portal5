@@ -47,6 +47,21 @@ WHERE e.KoordinatorID = m.ID";
 					<td>bis: </td>
 					<td><input id="enddate" type="text"></input></td>
 				</tr>
+				<tr>
+					<td>Koordinator: </td>
+					<td>
+						<select>
+						    <option value="" disabled="disabled" selected="selected">Please select a name</option>
+						    <?php
+						    	$abfrage_persoteam = "SELECT Mitglieder.ID, Mitglieder.Vorname, Mitglieder.Nachname FROM Mitglieder, Team, Teamhistorie WHERE Teamhistorie.KoordinatorID = Mitglieder.ID AND Teamhistorie.TeamID = Team.ID";
+						    	$ausgabe_persoteam = mysql_query($abfrage_persoteam);
+						    	while($row_persoteam = mysql_fetch_object($ausgabe_persoteam)) {
+						    		echo "<option value='$row_persoteam->Mitglieder.ID'>$row_persoteam->Mitglieder.Vorname $row_persoteam->Mitglieder.Nachname</option>";
+						    	}
+						    ?>
+						</select>
+					</td>
+				</tr>
 			</table>
 		</form>
 	</div>

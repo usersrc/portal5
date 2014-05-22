@@ -1,17 +1,3 @@
-
-
-
-<html>
-<meta charset="utf-8"/>
-<head>
-
-<link rel="stylesheet" type="text/css" href="UserAnlegen.css"/>
-<link rel="stylesheet" type="text/css" href="DatenbankStyle.css"/>
-<link rel="stylesheet" type= "text/css" href="C:\Program Files\XAMPP\htdocs\portal5\css\c5portal.css"/>
-<link type="text/css" rel="stylesheet" href="C:\Program Files\XAMPP\htdocs\portal5\css\css_reset.min.css"/>
-
-</head>
-<body>
 <div id"databaseStyle">
 	<table>
 		<tr> 
@@ -22,17 +8,9 @@
 			<th> Email </th> 
 		</tr>
 <?php
-$localhost_DB  = "wp023.webpack.hosteurope.de";
-$username_DB   = "dbu1055626";
-$password_DB   = "cooperation5_xxl";
-$database_DB   = "db1055626-projektdev";
 
-$verbindung = mysql_connect ($localhost_DB,
-$username_DB, $password_DB)
-or die ("keine Verbindung möglich. Benutzername oder Passwort sind falsch");
-
-mysql_select_db($database_DB)
-or die ("Die Datenbank existiert nicht.");
+connect_DB($localhost_DB,
+$username_DB, $password_DB, $database_DB);
 
 $abfrage = "SELECT Vorname, Nachname, Username, Geburtstag, Email FROM Mitglieder";
 $ergebnis = mysql_query($abfrage);
@@ -48,10 +26,6 @@ while($row = mysql_fetch_object($ergebnis))
    </tr>"; 
    }  
 
-function date_german2mysql($date) {
-    $d    =    explode(".",$date);
-    return    sprintf("%02d-%02d-%04d", $d[2], $d[1], $d[0]);
-}
 ?>
 </table>
 </div>
@@ -104,10 +78,3 @@ if($existiertbereits == true) {
 
 
 ?>
-
-
-
-
-
-</body>
-</html>
