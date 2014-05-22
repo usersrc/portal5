@@ -117,7 +117,7 @@ div#header{
 	width: 100%;
  }
  
-#perso_einsatzplanung_header {
+.content_header {
 	border-bottom: solid 1px #DDDDDD;
 	font-size: 35px;
 	font-weight: bold;
@@ -148,7 +148,7 @@ div#header{
 .dialog {
 	background-color: #FFFFFF;
 	display: none;
-	height: 500px;
+	height: 550px;
 	left: 20px;
 	margin: 0 auto 0;
 	opacity: 1;

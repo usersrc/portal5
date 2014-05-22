@@ -9,8 +9,7 @@
 		</tr>
 <?php
 
-connect_DB($localhost_DB,
-$username_DB, $password_DB, $database_DB);
+connect_DB($localhost_DB, $username_DB, $password_DB, $database_DB);
 
 $abfrage = "SELECT Vorname, Nachname, Username, Geburtstag, Email FROM Mitglieder";
 $ergebnis = mysql_query($abfrage);

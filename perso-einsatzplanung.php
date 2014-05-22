@@ -1,5 +1,5 @@
 <div id="perso_einsatzplanung_content">
-	<div id="perso_einsatzplanung_header">Einsatzplanung Flächenazubis</div>
+	<div class="content_header">Einsatzplanung Flächenazubis</div>
 	<table id="perso_einsatzplanung_table">
 		<tr>
 			<th>ID</th>
