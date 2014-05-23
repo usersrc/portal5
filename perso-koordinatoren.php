@@ -15,7 +15,7 @@
 
 
 <div class="KoordinatorenContent">
-	<table>
+	<table class="content_table">
 		<tr> 
 			<th> Vorname </th>
 			<th> Nachname </th>
@@ -23,15 +23,17 @@
 			<th> Geburtstag </th>
 			<th> Email </th> 
 		</tr>
-		<tr>
+		
 		<?php 
+			connect_DB($localhost_DB, $username_DB, $password_DB, $database_DB);
 			$abfrage = "SELECT Vorname, Nachname, Username, Geburtstag, Email FROM Mitglieder";
+			
 			$ergebnis = mysql_query($abfrage);
 			while($row = mysql_fetch_object($ergebnis)) {
-				echo "<td>  $row->Vorname </td><td>  $row->Nachname </td><td>  $row->Username </td><td>  $row->Geburtstag </td><td>  $row->Email </td>";
+				echo "<tr><td>  $row->Vorname </td><td>  $row->Nachname </td><td>  $row->Username </td><td>  $row->Geburtstag </td><td>  $row->Email </td></tr>";
 			}
   		?>
-		</tr>
+		
 	</table>
 
 

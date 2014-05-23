@@ -1,6 +1,6 @@
 <div id="perso_einsatzplanung_content">
 	<div class="content_header">Einsatzplanung Flächenazubis</div>
-	<table id="perso_einsatzplanung_table">
+	<table class="content_table">
 		<tr>
 			<th>ID</th>
 			<th>Vorname</th>
