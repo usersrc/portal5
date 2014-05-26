@@ -22,6 +22,9 @@ WHERE e.KoordinatorID = m.ID";
 					echo "<td>$row->ID</td><td>$row->Vorname</td><td>$row->Nachname</td><td>".date_mysql2german($row->Einsatzbeginn)."</td><td>".date_mysql2german($row->Einsatzende)."</td><td>$row->KVorname $row->KNachname</td>";
 				}
 
+
+				// Bei submit:
+				//if(isset($_POST['']))
 			?>
 		</tr>
 	</table>
