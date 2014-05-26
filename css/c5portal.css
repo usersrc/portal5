@@ -193,6 +193,9 @@ div#header{
 .dialog .dialog_content {
 	margin: 10px;
 }
+.dialog_form table tr {
+	padding: 3px;
+}
 
 /*
  *	----- Content Ende -----

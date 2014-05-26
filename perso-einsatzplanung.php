@@ -31,7 +31,7 @@ WHERE e.KoordinatorID = m.ID";
 <div class="dialog">
 	<div class="dialog_header"><div class="dialog_headline">Azubi hinzufügen</div><div class="dialog_close"></div></div>
 	<div class="dialog_content">
-		<form id="dialog_azubi_hinzufuegen" method="post" action="?content=einsatzplanung">
+		<form class="dialog_form" method="post" action="?content=einsatzplanung">
 			<table>
 				<tr>
 					<td>Vorname:</td>
@@ -53,10 +53,10 @@ WHERE e.KoordinatorID = m.ID";
 						<select>
 						    <option value="" disabled="disabled" selected="selected">Please select a name</option>
 						    <?php
-						    	$abfrage_persoteam = "SELECT Mitglieder.ID, Mitglieder.Vorname, Mitglieder.Nachname FROM Mitglieder, Team, Teamhistorie WHERE Teamhistorie.KoordinatorID = Mitglieder.ID AND Teamhistorie.TeamID = Team.ID";
+						    	$abfrage_persoteam = "SELECT Mitglieder.ID, Mitglieder.Vorname, Mitglieder.Nachname FROM Mitglieder"; // !!!Tabelle Teamhistorie existiert nicht Teamhistorie WHERE Teamhistorie.KoordinatorID = Mitglieder.ID AND Teamhistorie.TeamID = Team.ID";
 						    	$ausgabe_persoteam = mysql_query($abfrage_persoteam);
 						    	while($row_persoteam = mysql_fetch_object($ausgabe_persoteam)) {
-						    		echo "<option value='$row_persoteam->Mitglieder.ID'>$row_persoteam->Mitglieder.Vorname $row_persoteam->Mitglieder.Nachname</option>";
+						    		echo "<option value='$row_persoteam->Mitglieder.ID'>$row_persoteam->Vorname $row_persoteam->Nachname</option>";
 						    	}
 						    ?>
 						</select>
