@@ -124,13 +124,19 @@ div#header{
 	margin-bottom: 15px;
 	padding-bottom: 5px;
 }
- .content_table tr > * {
- 	border: solid 1px #000000;
- 	padding: 3px;
- }
- .content_table th {
+.content_table td {
+ 	padding: 4px 8px;
+}
+.content_table tr td:nth-child(2n) {
+	background-color: #CDCDC9;
+}
+.content_table tr {
+	border-bottom: solid 1px #555555;
+}
+.content_table th {
+ 	border-bottom: solid 2px #000000;
  	font-weight: bold;
- }
+}
 .button-dialog-open:hover {
 	cursor: pointer;
 }

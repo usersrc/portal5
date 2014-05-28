@@ -50,25 +50,6 @@
 	<div class="button-dialog-open">Koordinator hinzufügen</div>
 </div>
 
-<?php 
-
-$new = $_GET["new"]; 
-
-// switch($_REQUEST['new']) {
-		
-// 		/*
-// 		Perso
-// 		*/
-// 		case 'UserAnlegen': include 'UserAnlegen.php';
-// 			break; 
-// 		case 'Datenbank': include 'Datenbank.php';
-// 			break; 
-// 		 default: include 'home.php';
-
-// 	}
-		
-?>
-
 <div id="background"></div>
 <div class="dialog">
 	<div class="dialog_header"><div class="dialog_headline">Koordinator hinzufügen</div><div class="dialog_close"></div></div>
