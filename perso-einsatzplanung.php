@@ -9,7 +9,7 @@
 			<th>Einsatzende</th>
 			<th>ABB</th>
 		</tr>
-		<tr>
+		
 			<?php
 				
 				connect_DB($localhost_DB, $username_DB, $password_DB, $database_DB);
@@ -19,17 +19,33 @@ WHERE e.KoordinatorID = m.ID";
 				$select = mysql_query($abfrage);
 
 				while ($row = mysql_fetch_object($select)) {
-					echo "<td>$row->ID</td><td>$row->Vorname</td><td>$row->Nachname</td><td>".date_mysql2german($row->Einsatzbeginn)."</td><td>".date_mysql2german($row->Einsatzende)."</td><td>$row->KVorname $row->KNachname</td>";
+					echo "<tr><td>$row->ID</td><td>$row->Vorname</td><td>$row->Nachname</td><td>".date_mysql2german($row->Einsatzbeginn)."</td><td>".date_mysql2german($row->Einsatzende)."</td><td>$row->KVorname $row->KNachname</td></tr>";
 				}
-
-
-				// Bei submit:
-				//if(isset($_POST['']))
 			?>
-		</tr>
+		
 	</table>
 	<div class="button-dialog-open">+</div>
 </div>
+<?php
+	// Bei submit:
+	if(isset($_POST['neuerAzubi'])) {
+		$vorname = $_POST['vorname'];
+		$nachname = $_POST['nachname'];
+		$startdate = date_german2mysql($_POST['startdate']);
+		$enddate = date_german2mysql($_POST['enddate']);
+		$koordinatorID = $_POST['koordinatorID'];
+		echo "'$koordinatorID'"; // TODO
+
+		$eintrag = "INSERT INTO Eingesetzte_Azubis (Vorname, Nachname, Einsatzbeginn, Einsatzende, KoordinatorID)
+					VALUES('$vorname', '$nachname', '$startdate', '$enddate', '$koordinatorID')";
+		$eintrag_query = mysql_query($eintrag);
+		if($eintrag_query) {
+			echo 'Erfolgreich!';
+		} else {
+			echo 'Houston, wir haben ein Problem!';
+		}
+	}
+?>
 <div id="background"></div>
 <div class="dialog">
 	<div class="dialog_header"><div class="dialog_headline">Azubi hinzufügen</div><div class="dialog_close"></div></div>
@@ -46,9 +62,9 @@ WHERE e.KoordinatorID = m.ID";
 				</tr>
 				<tr>
 					<td>von: </td>
-					<td><input id="startdate" type="text"></input></td>
+					<td><input id="startdate" name="startdate" type="text"></input></td>
 					<td>bis: </td>
-					<td><input id="enddate" type="text"></input></td>
+					<td><input id="enddate" name="enddate" type="text"></input></td>
 				</tr>
 				<tr>
 					<td>Koordinator: </td>
@@ -59,11 +75,15 @@ WHERE e.KoordinatorID = m.ID";
 						    	$abfrage_persoteam = "SELECT Mitglieder.ID, Mitglieder.Vorname, Mitglieder.Nachname FROM Mitglieder"; // !!!Tabelle Teamhistorie existiert nicht Teamhistorie WHERE Teamhistorie.KoordinatorID = Mitglieder.ID AND Teamhistorie.TeamID = Team.ID";
 						    	$ausgabe_persoteam = mysql_query($abfrage_persoteam);
 						    	while($row_persoteam = mysql_fetch_object($ausgabe_persoteam)) {
-						    		echo "<option value='$row_persoteam->Mitglieder.ID'>$row_persoteam->Vorname $row_persoteam->Nachname</option>";
+						    		echo "<option value='$row_persoteam->ID' name='koordinatorID' >$row_persoteam->Vorname $row_persoteam->Nachname $row_persoteam->ID</option>";
 						    	}
 						    ?>
 						</select>
 					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="hinzufügen" name="neuerAzubi"></td>
 				</tr>
 			</table>
 		</form>

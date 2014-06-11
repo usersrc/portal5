@@ -37,12 +37,12 @@
 							VALUES 
 							('$vorname', '$nachname', '$username', '$geburtstag', '$team', '$position', '$beruf', '$mail')";
 
-							$eintrag_query = mysql_query($eintrag);
-							if($eintrag_query) {
-								echo 'Erfolgreich!';
-							} else {
-								echo 'Houston, wir haben ein Problem!';
-							}
+				$eintrag_query = mysql_query($eintrag);
+				if($eintrag_query) {
+					echo 'Erfolgreich!';
+				} else {
+					echo 'Houston, wir haben ein Problem!';
+				}
 			}
   		?>
 		
@@ -122,6 +122,7 @@
 				<tr>
 					<td></td>
 					<td><input type="submit" value="hinzufügen" name="neuerKoordinator"></td>
+				</tr>
 			</table>
 		</form>
 	</div>
