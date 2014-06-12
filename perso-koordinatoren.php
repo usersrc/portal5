@@ -73,7 +73,7 @@
 					<td><input type="text" name="mail"></input></td>
 				</tr>
 					<td>Geburtstag:</td>
-					<td><input type="date" name="geburtstag"></input></td>
+					<td><input type="date" name="geburtstag"></input></td> <!-- TODO ? Datum mit jQueryUI Datepicker auswählen -->
 				<tr>
 					<td>Team: </td>
 					<td>
