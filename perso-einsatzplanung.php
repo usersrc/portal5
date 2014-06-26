@@ -1,4 +1,27 @@
 <div id="perso_einsatzplanung_content">
+	<?php
+	connect_DB($localhost_DB, $username_DB, $password_DB, $database_DB);
+	// Bei submit:
+	if(isset($_POST['neuerAzubi'])) {
+		$vorname = $_POST['vorname'];
+		$nachname = $_POST['nachname'];
+		$startdate = date_german2mysql($_POST['startdate']);
+		$enddate = date_german2mysql($_POST['enddate']);
+		$koordinatorID = $_POST['koordinator'];
+		// $koordinatorID = (int)$koordinatorIDtest;
+
+		$eintrag = ("INSERT INTO Eingesetzte_Azubis (Vorname, Nachname, Einsatzbeginn, Einsatzende, KoordinatorID)
+					VALUES('$vorname', '$nachname', '$startdate', '$enddate', '$koordinatorID')");
+
+		// mysql_query($eintrag) or die('Houston, wir haben immer noch ein Problem!');
+		$eintrag_query = mysql_query($eintrag);
+		if($eintrag_query) {
+			echo 'Erfolgreich!';
+		} else {
+			echo 'Houston, wir haben ein Problem!'.$koordinatorID;
+		}
+	}
+?>
 	<div class="content_header">Einsatzplanung Flächenazubis</div>
 	<table class="content_table">
 		<tr>
@@ -24,27 +47,9 @@ WHERE e.KoordinatorID = m.ID";
 			?>
 		
 	</table>
-	<div class="button-dialog-open">+</div>
+	<div class="button-dialog-open">hinzufügen</div>
 </div>
-<?php
-	// Bei submit:
-	if(isset($_POST['neuerAzubi'])) {
-		$vorname = $_POST['vorname'];
-		$nachname = $_POST['nachname'];
-		$startdate = date_german2mysql($_POST['startdate']);
-		$enddate = date_german2mysql($_POST['enddate']);
-		$koordinatorID = $_POST['koordinator'];
 
-		$eintrag = "INSERT INTO Eingesetzte_Azubis (Vorname, Nachname, Einsatzbeginn, Einsatzende, KoordinatorID)
-					VALUES('$vorname', '$nachname', '$startdate', '$enddate', '$koordinatorID')";
-		$eintrag_query = mysql_query($eintrag);
-		if($eintrag_query) {
-			echo 'Erfolgreich!';
-		} else {
-			echo 'Houston, wir haben ein Problem!';
-		}
-	}
-?>
 <div id="background"></div>
 <div class="dialog">
 	<div class="dialog_header"><div class="dialog_headline">Azubi hinzufügen</div><div class="dialog_close"></div></div>
@@ -68,13 +73,13 @@ WHERE e.KoordinatorID = m.ID";
 				<tr>
 					<td>Koordinator: </td>
 					<td>
-						<select>
+						<select name="koordinator">
 						    <option value="" disabled="disabled" selected="selected">Please select a name</option>
 						    <?php
 						    	$abfrage_persoteam = "SELECT Mitglieder.ID, Mitglieder.Vorname, Mitglieder.Nachname FROM Mitglieder"; // !!!Tabelle Teamhistorie existiert nicht Teamhistorie WHERE Teamhistorie.KoordinatorID = Mitglieder.ID AND Teamhistorie.TeamID = Team.ID";
 						    	$ausgabe_persoteam = mysql_query($abfrage_persoteam);
 						    	while($row_persoteam = mysql_fetch_object($ausgabe_persoteam)) {
-						    		echo "<option value='$row_persoteam->ID' name='koordinator' >$row_persoteam->Vorname $row_persoteam->Nachname $row_persoteam->ID</option>";
+						    		echo "<option value='$row_persoteam->ID'>$row_persoteam->Vorname $row_persoteam->Nachname $row_persoteam->ID</option>";
 						    	}
 						    ?>
 						</select>
