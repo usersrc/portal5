@@ -202,6 +202,9 @@ div#header{
 .dialog_form table tr {
 	padding: 3px;
 }
+.edit-table:hover {
+	cursor: pointer;
+}
 
 /*
  *	----- Content Ende -----

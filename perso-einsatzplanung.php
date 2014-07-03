@@ -31,6 +31,7 @@
 			<th>Einsatzbeginn</th>
 			<th>Einsatzende</th>
 			<th>ABB</th>
+			<th>Bearbeitung<th>
 		</tr>
 		
 			<?php
@@ -42,7 +43,7 @@ WHERE e.KoordinatorID = m.ID";
 				$select = mysql_query($abfrage);
 
 				while ($row = mysql_fetch_object($select)) {
-					echo "<tr><td>$row->ID</td><td>$row->Vorname</td><td>$row->Nachname</td><td>".date_mysql2german($row->Einsatzbeginn)."</td><td>".date_mysql2german($row->Einsatzende)."</td><td>$row->KVorname $row->KNachname</td></tr>";
+					echo "<tr><td>$row->ID</td><td>$row->Vorname</td><td>$row->Nachname</td><td>".date_mysql2german($row->Einsatzbeginn)."</td><td>".date_mysql2german($row->Einsatzende)."</td><td>$row->KVorname $row->KNachname</td><td class='edit-table'>bearbeiten</td></tr>";
 				}
 			?>
 		
