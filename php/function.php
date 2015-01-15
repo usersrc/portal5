@@ -19,4 +19,14 @@ function connect_DB($localhost_DB, $username_DB, $password_DB, $database_DB) {
 	mysql_select_db($database_DB)
 	or die ("Die Datenbank existiert nicht.");
 }
+
+// compare two dates
+function isAGreaterThanB($timeA, $timeB) {
+	//return strtotime($timeA) > strtotime($timeB);
+	if (strtotime($timeA) > strtotime($timeB)) {
+		return true;
+	} else {
+		return false;
+	}
+}
 ?>

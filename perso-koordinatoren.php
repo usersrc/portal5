@@ -3,22 +3,31 @@
 <div class="content_header">Koordinatorenübersicht</div>
 <div class="KoordinatorenContent">
 	<table class="content_table">
-		<tr> 
+		<tr>
 			<th> Vorname </th>
 			<th> Nachname </th>
 			<th> Username </th>
 			<th> Geburtstag </th>
-			<th> Email </th> 
+			<th> Email </th>
 		</tr>
-		
-		<?php 
+
+		<?php
 			connect_DB($localhost_DB, $username_DB, $password_DB, $database_DB);
-			$abfrage = "SELECT Vorname, Nachname, Username, Geburtstag, Email FROM Mitglieder";
-			
+			$abfrage = "SELECT Vorname, Nachname, Username, Geburtstag, Email, Austrittsdatum FROM Mitglieder";
+			echo isAGreaterThanB(date("Y-m-d"), "2015-02-12");
+
+			// todays date: date("Y-m-d")
 			$ergebnis = mysql_query($abfrage);
 			while($row = mysql_fetch_object($ergebnis)) {
-				echo "<tr><td>  $row->Vorname </td><td>  $row->Nachname </td><td>  $row->Username </td><td>  $row->Geburtstag </td><td>  $row->Email </td></tr>";
+				if(!$row->Austrittsdatum == '') {
+					if(!isAGreaterThanB(date("Y-m-d"), $row->Austrittsdatum)) {
+						echo "<tr><td>  $row->Vorname </td><td>  $row->Nachname </td><td>  $row->Username </td><td>  $row->Geburtstag </td><td>  $row->Email </td></tr>";
+					}
+				} else {
+					echo "<tr><td>  $row->Vorname </td><td>  $row->Nachname </td><td>  $row->Username </td><td>  $row->Geburtstag </td><td>  $row->Email </td></tr>";
+				}
 			}
+
 
 
 			// bei submit:
@@ -34,7 +43,7 @@
 
 				$eintrag = "INSERT INTO Mitglieder
 							(Vorname, Nachname, Username, Geburtstag, TeamID, PositionsID, AusbildungsberufID, Email)
-							VALUES 
+							VALUES
 							('$vorname', '$nachname', '$username', '$geburtstag', '$team', '$position', '$beruf', '$mail')";
 
 				$eintrag_query = mysql_query($eintrag);
@@ -45,7 +54,7 @@
 				}
 			}
   		?>
-		
+
 	</table>
 	<div class="button-dialog-open">Koordinator hinzufügen</div>
 </div>
