@@ -21,7 +21,6 @@
 			echo 'Houston, wir haben ein Problem!'.$koordinatorID;
 		}
 	}
-	if(isset($_POST[]))
 ?>
 	<div class="content_header">Einsatzplanung Flächenazubis</div>
 	<table class="content_table">
@@ -34,12 +33,12 @@
 			<th>ABB</th>
 			<th>Bearbeitung<th>
 		</tr>
-		
+
 			<?php
-				
+
 				connect_DB($localhost_DB, $username_DB, $password_DB, $database_DB);
 
-				$abfrage = "SELECT e.ID, e.Vorname, e.Nachname, e.Einsatzbeginn, e.Einsatzende, m.Vorname as KVorname, m.Nachname as KNachname FROM Eingesetzte_Azubis e, Mitglieder m 
+				$abfrage = "SELECT e.ID, e.Vorname, e.Nachname, e.Einsatzbeginn, e.Einsatzende, m.Vorname as KVorname, m.Nachname as KNachname FROM Eingesetzte_Azubis e, Mitglieder m
 WHERE e.KoordinatorID = m.ID";
 				$select = mysql_query($abfrage);
 
@@ -47,7 +46,7 @@ WHERE e.KoordinatorID = m.ID";
 					echo "<tr><td>$row->ID</td><td>$row->Vorname</td><td>$row->Nachname</td><td>".date_mysql2german($row->Einsatzbeginn)."</td><td>".date_mysql2german($row->Einsatzende)."</td><td>$row->KVorname $row->KNachname</td><td class='remove-table'>löschen</td></tr>";
 				}
 			?>
-		
+
 	</table>
 	<div class="button-dialog-open">hinzufügen</div>
 </div>
