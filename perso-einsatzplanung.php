@@ -38,12 +38,14 @@
 
 				connect_DB($localhost_DB, $username_DB, $password_DB, $database_DB);
 
-				$abfrage = "SELECT e.ID, e.Vorname, e.Nachname, e.Einsatzbeginn, e.Einsatzende, m.Vorname as KVorname, m.Nachname as KNachname FROM Eingesetzte_Azubis e, Mitglieder m
+				$abfrage = "SELECT e.ID, e.Vorname, e.Nachname, e.Einsatzbeginn, e.Einsatzende, m.Vorname as KVorname, m.Nachname as KNachname, e.deleted FROM Eingesetzte_Azubis e, Mitglieder m
 WHERE e.KoordinatorID = m.ID";
 				$select = mysql_query($abfrage);
 
 				while ($row = mysql_fetch_object($select)) {
-					echo "<tr><td>$row->ID</td><td>$row->Vorname</td><td>$row->Nachname</td><td>".date_mysql2german($row->Einsatzbeginn)."</td><td>".date_mysql2german($row->Einsatzende)."</td><td>$row->KVorname $row->KNachname</td><td class='remove-table'>löschen</td></tr>";
+					if(!$row->deleted) {
+						echo "<tr><td>$row->ID</td><td>$row->Vorname</td><td>$row->Nachname</td><td>".date_mysql2german($row->Einsatzbeginn)."</td><td>".date_mysql2german($row->Einsatzende)."</td><td>$row->KVorname $row->KNachname</td><td class='remove-table'>löschen</td></tr>";
+					}
 				}
 			?>
 
