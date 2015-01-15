@@ -1,0 +1,233 @@
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+/*
+ *	----- Header Start -----
+ */
+div#header{
+	background-color: #3F3737;
+	color: #FFFFFF;
+	font-family: Tahoma;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 50px;
+	padding-left: 15px;
+	width: 100%;
+}
+
+/*
+ *	----- Header Ende -----
+ */
+ 
+/*
+ *	----- Navigation Start -----
+ */
+#navigation_back {
+	background-color: #CCCCCC;
+	height: 100%;
+	width: 250px;
+}
+
+#navigation {
+	border-bottom: 1px solid #CCCCCC;
+	position: absolute;
+}
+#navigation, .nav_section, #navigation li {
+	font-family: Tahoma;
+	font-weight: bold;
+	line-height: 35px;
+	margin: 0;
+	width: 250px;
+}
+
+#navigation .nav_section .nav_visible {
+	background-color: #F1F0F0;
+	border-right: 1px solid #CCCCCC;
+	color: #000000;
+	display: inline-block;
+}
+#navigation .nav_section .nav_link.nav_active {
+	background-color: #D5D5D6 !important;
+}
+
+.nav_section .nav_link {
+	display: none;
+}
+
+.nav_section .nav_link a {
+	font-size: 14px;
+}
+
+#navigation .nav_section .nav_link:hover {
+	background-color: #E1E0E0;
+	color: #E12626;
+	cursor: pointer;
+}
+
+.nav_section li {
+	list-style-type: none;
+	padding-left: 5px;
+}
+
+/* fügt zwischen zwei _sichtbaren_ nav_links eine border hinzu */
+.nav_link.nav_visible ~ .nav_link.nav_visible { 
+	border-top: 1px solid #CCCCCC;
+}
+.nav_header a {
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+}
+.nav_link a {
+	color: #000000;
+	display: block;
+	text-decoration: none;
+}
+.nav_link a:hover {
+	color: #E12626;
+}
+
+#navigation .nav_header {
+	background-color: #3F3737;
+	color: #FFFFFF;
+	font-weight: bolder;
+	letter-spacing: 1px;
+}
+
+#navigation .nav_header.nav_header_myC5 {
+	background-color: #E12626;
+}
+
+/*
+ *	----- Navigation Ende -----
+ */
+ 
+/*
+ *	----- Content Start -----
+ */
+ 
+ div#content{
+	position: absolute;
+	top: 50px;
+	height: 90%;
+	left: 250px;
+	margin: 10px;
+	width: 100%;
+	overflow-y: auto; 
+ }
+ 
+.content_header {
+	border-bottom: solid 1px #DDDDDD;
+	font-size: 35px;
+	font-weight: bold;
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+}
+.content_table td {
+ 	padding: 4px 8px;
+}
+.content_table tr td:nth-child(2n) {
+	background-color: #CDCDC9;
+}
+.content_table tr {
+	border-bottom: solid 1px #555555;
+}
+.content_table th {
+ 	border-bottom: solid 2px #000000;
+ 	font-weight: bold;
+}
+.button-dialog-open:hover {
+	cursor: pointer;
+}
+#background {
+	background-color: #000000;
+	display: none;
+	height: 100%;
+	left: -260px;
+	opacity: 0.5;
+	position: absolute;
+	top: -60px;
+	width: 100%;
+	z-index: 998;
+}
+.dialog {
+	background-color: #FFFFFF;
+	display: none;
+	height: 550px;
+	left: 20px;
+	margin: 0 auto 0;
+	opacity: 1;
+	position: absolute;
+	top: 60px;
+	width: 800px;
+	z-index: 999;
+}
+.dialog .dialog_header {
+	border-bottom: solid 1px #DDDDDD;
+	height: 60px;
+	width: 100%;
+}
+.dialog .dialog_headline {
+	display: block;
+	float: left;
+	font-size: 30px;
+	font-weight: bold;
+	margin-left: 100px;
+	margin-top: 15px;
+}
+.dialog .dialog_close {
+	background-color: #DDDDDD;
+	border-radius: 2px;
+	float: right;
+	height: 30px;
+	margin: 15px;
+	width: 30px;
+}
+.dialog .dialog_close:after {
+	content: 'x';
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 26px;
+	margin: 9px;
+}
+.dialog .dialog_close:hover {
+	background-color: #CCCCCC;
+	color: #E12626;
+	cursor: pointer;
+}
+.dialog .dialog_content {
+	margin: 10px;
+}
+.dialog_form table tr {
+	padding: 3px;
+}
+.edit-table:hover {
+	cursor: pointer;
+}
+
+/*
+ *	----- Content Ende -----
+ */
+ 
+/*
+ *	----- Allgemeine class Start -----
+ */
+.ui-datepicker { 
+	font-size: 14px!important;  
+}
+
+div.abfrageErfolgt{
+    background-color: #F1F0F0;
+    border: 1px solid #CCCCCC;
+    font-size: 16px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 10px;
+}
+
+/*
+ *	----- Allgemeine class Ende -----
+ */

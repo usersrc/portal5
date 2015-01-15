@@ -1,0 +1,31 @@
+#navigation, .nav_section, #navigation li {
+	font-family: Tahoma;
+	font-weight: bold;
+	line-height: 35px;
+	margin: 0;
+	width: 250px;
+}
+
+#navigation .nav_section .nav_active {
+	background-color: #F9F9F9;
+	color: #000000;
+	display: inline-block;
+}
+
+.nav_section .nav_link {
+	display: none;
+}
+
+.nav_section li {
+	list-style-type: none;
+	padding-left: 5px;
+}
+
+#navigation .nav_header {
+	background-color: #3F3737;
+	color: #FFFFFF;
+}
+
+#navigation .nav_header.nav_header_myC5 {
+	background-color: #E12626;
+}
