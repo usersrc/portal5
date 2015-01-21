@@ -52,7 +52,7 @@ WHERE e.KoordinatorID = m.ID";
 	</table>
 	<div class="button-dialog-open">hinzufügen</div>
 	<br>
-	<div class="content_header">ehemalig eingesetzte Azubis</div>
+	<div class="content_header content_header_sub">ehemalig eingesetzte Azubis</div>
 	<table class="content_table">
 		<tr>
 			<th>ID</th>
@@ -61,8 +61,7 @@ WHERE e.KoordinatorID = m.ID";
 			<th>Einsatzbeginn</th>
 			<th>Einsatzende</th>
 			<th>ABB</th>
-			<th>Bearbeitung<th>
-			</tr>
+		</tr>
 
 			<?php
 
@@ -74,7 +73,7 @@ WHERE e.KoordinatorID = m.ID";
 
 			while ($row = mysql_fetch_object($select)) {
 				if(!$row->deleted && isAGreaterThanB(date("Y-m-d"), $row->Einsatzende)) {
-					echo "<tr><td>$row->ID</td><td>$row->Vorname</td><td>$row->Nachname</td><td>".date_mysql2german($row->Einsatzbeginn)."</td><td>".date_mysql2german($row->Einsatzende)."</td><td>$row->KVorname $row->KNachname</td><td class='remove-table'>löschen</td></tr>";
+					echo "<tr><td>$row->ID</td><td>$row->Vorname</td><td>$row->Nachname</td><td>".date_mysql2german($row->Einsatzbeginn)."</td><td>".date_mysql2german($row->Einsatzende)."</td><td>$row->KVorname $row->KNachname</td></tr>";
 				}
 			}
 			?>

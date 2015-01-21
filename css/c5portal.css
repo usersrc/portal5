@@ -20,7 +20,7 @@ div#header{
 /*
  *	----- Header Ende -----
  */
- 
+
 /*
  *	----- Navigation Start -----
  */
@@ -72,7 +72,7 @@ div#header{
 }
 
 /* fügt zwischen zwei _sichtbaren_ nav_links eine border hinzu */
-.nav_link.nav_visible ~ .nav_link.nav_visible { 
+.nav_link.nav_visible ~ .nav_link.nav_visible {
 	border-top: 1px solid #CCCCCC;
 }
 .nav_header a {
@@ -103,11 +103,11 @@ div#header{
 /*
  *	----- Navigation Ende -----
  */
- 
+
 /*
  *	----- Content Start -----
  */
- 
+
  div#content{
 	position: absolute;
 	top: 50px;
@@ -115,15 +115,19 @@ div#header{
 	left: 250px;
 	margin: 10px;
 	width: 100%;
-	overflow-y: auto; 
+	overflow-y: auto;
  }
- 
+
 .content_header {
 	border-bottom: solid 1px #DDDDDD;
 	font-size: 35px;
 	font-weight: bold;
 	margin-bottom: 15px;
 	padding-bottom: 5px;
+}
+.content_header.content_header_sub {
+	font-size: 25px;
+	margin-top: 20px;
 }
 .content_table td {
  	padding: 4px 8px;
@@ -210,12 +214,12 @@ div#header{
 /*
  *	----- Content Ende -----
  */
- 
+
 /*
  *	----- Allgemeine class Start -----
  */
-.ui-datepicker { 
-	font-size: 14px!important;  
+.ui-datepicker {
+	font-size: 14px!important;
 }
 
 div.abfrageErfolgt{
