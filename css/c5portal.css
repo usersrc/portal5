@@ -149,10 +149,10 @@ div#header{
 	background-color: #000000;
 	display: none;
 	height: 100%;
-	left: -260px;
+	left: 0px;
+	top: 0px;
 	opacity: 0.5;
 	position: absolute;
-	top: -60px;
 	width: 100%;
 	z-index: 998;
 }

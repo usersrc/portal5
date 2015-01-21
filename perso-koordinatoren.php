@@ -59,7 +59,6 @@
 	<div class="button-dialog-open">Koordinator hinzufügen</div>
 </div>
 
-<div id="background"></div>
 <div class="dialog">
 	<div class="dialog_header"><div class="dialog_headline">Koordinator hinzufügen</div><div class="dialog_close"></div></div>
 	<div class="dialog_content">

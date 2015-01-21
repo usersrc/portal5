@@ -29,30 +29,30 @@ Portal5 (interne Administration)
 
 		<ul class="nav_section" id="nav_perso">
 			<li class="nav_header">Perso</li>
-			<li class="nav_link nav_visible" id="einsatzplanung"><a href="?content=einsatzplanung">Einsatzplanung</a></li>		
+			<li class="nav_link nav_visible" id="einsatzplanung"><a href="?content=einsatzplanung">Einsatzplanung</a></li>
 			<li class="nav_link nav_visible" id="koordinatoren"><a href="?content=koordinatoren">Koordinatoren</a></li>
 			<li class="nav_link nav_visible" id="bewerbung"><a href="?content=bewerbung">Bewerbung</a></li>
 		</ul>
 
-		<ul class="nav_section" id="nav_finanzen">			
-			<li class="nav_header">Finanzen</li>			
-			<li class="nav_link nav_visible" id="fib"><a href="?content=fib">FIB</a></li>			
+		<ul class="nav_section" id="nav_finanzen">
+			<li class="nav_header">Finanzen</li>
+			<li class="nav_link nav_visible" id="fib"><a href="?content=fib">FIB</a></li>
 			<li class="nav_link nav_visible" id="kva"><a href="?content=kva">KVA</a></li>
 			<li class="nav_link nav_visible" id="rechnung"><a href="?content=rechnung">Rechnung</a></li>
 		</ul>
 
-		<ul class="nav_section" id="nav_event">			
+		<ul class="nav_section" id="nav_event">
 			<li class="nav_header">Event</li>
 			<li class="nav_link nav_visible" id="fib-werbe"><a href="?content=fib-werbe">FIB</a></li>
 		</ul>
 
-		<ul class="nav_section" id="nav_werbeteam">			
+		<ul class="nav_section" id="nav_werbeteam">
 			<li class="nav_header">Werbeteam</li>
 			<li class="nav_link nav_visible" id="fib-event"><a href="?content=fib-event">FIB</a></li>
 		</ul>
 
-		<ul class="nav_section" id="nav_support">			
-			<li class="nav_header">Support</li>			
+		<ul class="nav_section" id="nav_support">
+			<li class="nav_header">Support</li>
 			<li class="nav_link nav_visible" id="auftrag"><a href="?content=auftrag">Report</a></li>
 		</ul>
 	</div>
@@ -79,10 +79,10 @@ Portal5 (interne Administration)
 			break;
 		case 'UserAnlegen': include 'UserAnlegen.php';
 			break;
-		case 'UserAnlegen' : include 'Datenbank.php'; 
-			break; 
-		
-			
+		case 'UserAnlegen' : include 'Datenbank.php';
+			break;
+
+
 		/*
 		Finanzen
 		*/
@@ -111,6 +111,8 @@ Portal5 (interne Administration)
 		}
 	?>
 </div>
+<div id="background"></div>
+
 <script language="javascript" type="text/javascript" src="jquery/jquery-1.11.0.min.js"></script>
 <script language="javascript" type="text/javascript" src="jquery/jquery-ui-1.10.4.min.js"></script>
 <script language="javascript" type="text/javascript" src="jquery/c5portal.js"></script>

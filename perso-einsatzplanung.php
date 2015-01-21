@@ -82,7 +82,6 @@ WHERE e.KoordinatorID = m.ID";
 </div>
 
 <!-- Dialog 'hinzufügen' -->
-<div id="background"></div>
 <div class="dialog">
 	<div class="dialog_header"><div class="dialog_headline">Azubi hinzufügen</div><div class="dialog_close"></div></div>
 	<div class="dialog_content">
