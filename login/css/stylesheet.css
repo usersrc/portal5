@@ -1,0 +1,54 @@
+article {
+    background-color: #1c1d22;
+}
+
+body {
+    text-align: center; /* Zentrierung IE */
+    margin: 0px;
+    padding: 0px;
+}
+
+form {
+    float: left;
+    margin-left: 25px;
+    margin-top: 9px;
+}
+
+p {
+    font-size: 20;
+}
+
+.main {
+  background-color: silver;
+    width: 1000px;
+    margin: 0 auto;
+    height: 600px;
+}
+
+.login {
+    background-color: #1c1d22;
+    height: 40px;
+    width: 100%;
+
+}
+
+#loggedin {
+  float: left;
+  margin-left: 25px;
+  margin-top: 7px;
+}
+
+#p5logo {
+  margin-top: 75px;
+}
+
+.main {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.menu {
+  background-color: #3f3737;
+  height: 600px;
+  width: 200px;
+}

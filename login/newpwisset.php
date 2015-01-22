@@ -1,11 +1,9 @@
 <?php
-	#session_start();
-	#$_SESSION = array();
+	session_start();
+	setcookie ("firstlogin", "", time() - 3600);
+	setcookie ("login", "", time() - 3600);
 
-	header('refresh:3;http://mobile.dev');
-	
-	echo "Dein Passwort wurde erfolgreich geaendert. Bitte logge dich erneut ein. Du wirst in 5 Sekunden automatisch weitergeleitet. Falls nicht, klicke hier."
-	
-	
-	#session_destroy();
+	header('refresh:3;http://mobile.dev/portal5');
+
+	echo "Dein Passwort wurde erfolgreich geaendert. Du wirst nun automatisch vom System ausgeloggt und auf die Startseite weitergeleitet. Falls nicht, klicke bitte hier."
 ?>
