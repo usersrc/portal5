@@ -1,4 +1,4 @@
-
+<div id="perso_koordinatoren_content" class="scroll">
 
 <div class="content_header">Koordinatorenübersicht</div>
 <div class="KoordinatorenContent">
@@ -134,4 +134,5 @@
 			</table>
 		</form>
 	</div>
+</div>
 </div>

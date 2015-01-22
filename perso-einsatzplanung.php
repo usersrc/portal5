@@ -1,4 +1,4 @@
-<div id="perso_einsatzplanung_content">
+<div id="perso_einsatzplanung_content" class="scroll">
 	<?php
 	connect_DB($localhost_DB, $username_DB, $password_DB, $database_DB);
 	// Bei submit:
