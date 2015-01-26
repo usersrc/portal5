@@ -5,24 +5,6 @@ html, body {
 }
 
 /*
- *	----- Header Start -----
- */
-div#header{
-	background-color: #3F3737;
-	color: #FFFFFF;
-	font-family: Tahoma;
-	font-size: 20px;
-	font-weight: bold;
-	line-height: 50px;
-	padding-left: 15px;
-	width: 100%;
-}
-
-/*
- *	----- Header Ende -----
- */
-
-/*
  *	----- Navigation Start -----
  */
 #navigation_back {

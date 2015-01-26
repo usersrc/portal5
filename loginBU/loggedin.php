@@ -1,8 +1,8 @@
 <?php
-session_start();
+$username = $_COOKIE['login'];
 
 echo "<div id=\"loggedin\">" .
-      "Hallo " . $_SESSION['USER'] . " :)"
+      "Hallo " . $username . " :)"
       . "</div>"
       . "<a id=\"loggedin\" href=\"login/logout.php\">Logout</a>";
 ?>
