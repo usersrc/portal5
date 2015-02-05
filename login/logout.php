@@ -1,6 +1,5 @@
 <?php
-    setcookie ("login", "", time() - 3600, ’/’);
-    setcookie("team", "", time() - 3600, ’/’);
+    unset($_SESSION['USER']);
+    unset($_SESSION['PASSWORD']);
     header("Location: ../index.php");
-exit;
 ?>

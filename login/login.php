@@ -1,5 +1,5 @@
 <?php
-	session_start();
+
 	$host = "localhost";
 	$dbuser = "root";
 	$dbpass = "login";
@@ -34,7 +34,7 @@
 					$row = mysql_fetch_object($result);
 
 					if($row->newuser == 1) {
-            $_SESSION['FIRSTLOGIN'] = 1;
+            $_SESSION['FIRSTLOGIN'] = "blah";
 						header("Location: index.php");
 					} else {
 						$_SESSION['LOGIN'] = 1;

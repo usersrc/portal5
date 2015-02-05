@@ -12,7 +12,6 @@
         <div class="login">
           <?php
           session_start();
-
           if (!isset($_SESSION['FIRSTLOGIN']) AND !isset($_SESSION['LOGIN'])) {
             include ("login/login.php");
           }
